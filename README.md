@@ -1,36 +1,38 @@
 # Clinic Management API
 
-API لإدارة مواعيد العيادة باستخدام ASP.NET Core وEntity Framework Core، مع التركيز على الأداء والأمان.
+An API for managing clinic appointments using ASP.NET Core and Entity Framework Core, focusing on performance and security.
 
-## المميزات
-- **إدارة المواعيد:**
-  - إضافة مواعيد جديدة مع التحقق من توفر الطبيب والمريض.
-  - جلب قائمة المواعيد مع فلاتر (حسب `patientId` و`doctorId`).
-  - تعديل المواعيد مع التحقق من عدم التضارب.
-  - حذف المواعيد.
-- **الأمان:**
-  - دعم الـ Authentication باستخدام JWT لحماية الـ Endpoints.
-- **الأداء والصيانة:**
-  - تسجيل الأحداث باستخدام Logging لتتبع العمليات والأخطاء.
-  - استخدام Repository Pattern لفصل منطق قاعدة البيانات.
-  - استخدام DTOs لنقل البيانات بكفاءة.
-- **إدارة قاعدة البيانات:**
-  - استخدام Entity Framework Core مع Migrations لإنشاء وتحديث قاعدة البيانات.
+## Features
+- **Appointment Management:**
+  - Create new appointments with availability checks for doctors and patients.
+  - Retrieve appointments with filters (by `patientId` and `doctorId`).
+  - Update appointments with conflict validation.
+  - Delete appointments.
+- **Security:**
+  - Supports Authentication using JWT to secure endpoints.
+- **Performance & Maintenance:**
+  - Event logging using Logging to track operations and errors.
+  - Uses Repository Pattern to separate database logic.
+  - Uses DTOs for efficient data transfer.
+- **Database Management:**
+  - Uses Entity Framework Core with Migrations for database creation and updates.
 
-## هيكلة المشروع
-- `Controllers/`: يحتوي على الـ Endpoints (مثل `AppointmentController`).
-- `DTOs/`: يحتوي على كائنات نقل البيانات (مثل `AppointmentDto`).
-- `Interfaces/`: يحتوي على الـ Interfaces (مثل `IAppointmentService`).
-- `Models/`: يحتوي على الكيانات (مثل `Appointment`, `Doctor`, `Patient`).
-- `Repository/`: يحتوي على الـ Repositories (مثل `AppointmentRepository`).
-- `Services/`: يحتوي على منطق الأعمال (مثل `AppointmentService`).
-- `Data/`: يحتوي على إعدادات قاعدة البيانات (مثل `AppDbContext`).
-- `Helpers/`, `Middlewares/`, `Utility/`: أدوات مساعدة لتحسين الأداء.
+## Project Structure
+- `Controllers/`: Contains the API endpoints (e.g., `AppointmentController`).
+- `DTOs/`: Contains Data Transfer Objects (e.g., `AppointmentDto`).
+- `Interfaces/`: Contains service interfaces (e.g., `IAppointmentService`).
+- `Models/`: Contains entities (e.g., `Appointment`, `Doctor`, `Patient`).
+- `Repository/`: Contains repositories (e.g., `AppointmentRepository`).
+- `Services/`: Contains business logic (e.g., `AppointmentService`).
+- `Data/`: Contains database configuration (e.g., `AppDbContext`).
+- `Helpers/`, `Middlewares/`, `Utility/`: Helper tools for improved functionality.
 
-## التقنيات المستخدمة
+## Technologies Used
 - ASP.NET Core
 - Entity Framework Core
 - SQL Server
 - JWT Authentication
 - Logging
 
+## How to Run
+1. Clone the repository:
